@@ -7,6 +7,8 @@
 // is simply a struct of method pointers
 
 // These two structs much be declared in both the Host application and any plugin
+#pragma once
+
 
 typedef struct
 {

@@ -1,5 +1,6 @@
 #include "os_call.h"
 #include "api.h"
+#include "hostProgam.h"
 #include <stdio.h>
 
 //HINSTANCE handle; // Handle to the DLL

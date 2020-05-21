@@ -6,6 +6,8 @@ void __attribute__ ((destructor)) cleanUpLibrary(void) {}
 
 https://stackoverflow.com/questions/12463718/linux-equivalent-of-dllmain
 */
+#pragma once
+
 
 #if defined(_MSC_VER) // Microsoft compiler
 	#include <windows.h>

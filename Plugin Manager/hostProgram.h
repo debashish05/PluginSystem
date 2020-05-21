@@ -1,4 +1,5 @@
 // These are the three methods that the host will export to a plugin
+#pragma once
 
 int getHostVersion ();
 

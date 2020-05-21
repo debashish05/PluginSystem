@@ -1,8 +1,23 @@
 // pl_exported.h
-//Reference- https://atomheartother.github.io/c++/2018/07/12/CPPDynLib.html
 
 #pragma once
 
+#if defined(_WIN32)
+    #if defined(STATIC_PLUGIN)
+        #define EXPORTED
+    #else
+        #if defined(EXPORT_PLUGIN)
+            #define EXPORTED __declspec(dllexport)
+        #else
+            #define EXPORTED __declspec(dllimport)
+        #endif
+    #endif
+#else
+    #define EXPORTED
+#endif
+
+
+/*
 // Define EXPORTED for any platform
 #if defined _WIN32 || defined __CYGWIN__
   #ifdef WIN_EXPORT
@@ -29,4 +44,4 @@
     #define EXPORTED
     #define NOT_EXPORTED
   #endif
-#endif
+#endif */
